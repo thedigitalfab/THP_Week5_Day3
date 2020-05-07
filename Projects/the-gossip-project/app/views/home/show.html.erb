@@ -1,0 +1,19 @@
+<br/>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1>Welcome <%= @first_name %>!</h1>
+</div>
+
+<div class="container">
+    <% @list_gossips.each_with_index do |gossip|%>
+        <div class="card-deck mb-1 text-center">
+            <div class="card mb-2 shadow-sm">
+                <div class="card-header"></div>
+                <a href="/gossip/<%= gossip.id %>/">
+                    <h4 class="my-0 font-weight-normal"><%= gossip.title %></h4>
+                </a>
+                <footer class="blockquote-footer">Gossip writed by: <a href="/user/<%= gossip.user.id %>/"><cite title="Source Title"><%= gossip.user.first_name%> <%= gossip.user.last_name%></cite></a> </footer>
+            </div>
+        </div>
+    <% end %>
+</div>
+<br/>
