@@ -1,0 +1,18 @@
+<br/>
+<div class="container">
+    <div class="card-deck mb-1 text-center">
+        <div class="card mb-2 shadow-sm">
+            <div class="card-header">
+                <h1>User Profile:</h1>
+            </div>
+            <p>
+                first name: <%= @user.first_name %><br/>
+                last name: <%= @user.last_name %><br/>
+                age: <%= @user.age %><br/>
+                live in: <%= @user.city.name %>
+            </p>
+            <footer class="blockquote-footer"> member since: <%= @user.created_at %> </footer>
+        </div>
+    </div>
+</div>
+<br/>

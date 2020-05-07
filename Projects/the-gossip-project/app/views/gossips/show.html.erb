@@ -1,0 +1,18 @@
+<br/>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1>Gossip n°: <%= @gossip.id %></h1>
+</div>
+
+<div class="container">
+    <div class="card-deck mb-1 text-center">
+        <div class="card mb-2 shadow-sm">
+            <div class="card-header">
+                <h2><%= @gossip.title %></h2>
+            </div>
+            <p><%= @gossip.content %></p>
+            <p>Gossip writed by: <a href="/user/<%= @gossip.user.id %>/"><cite title="Source Title"><%= @gossip.user.first_name%> <%= @gossip.user.last_name%></cite></a></p>
+            <footer class="blockquote-footer"> <%= @gossip.created_at %> </footer>
+        </div>
+    </div>
+</div>
+<br/>
