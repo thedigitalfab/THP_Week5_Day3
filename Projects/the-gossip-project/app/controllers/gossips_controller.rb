@@ -1,11 +1,6 @@
 class GossipsController < ApplicationController
     def index
         @list_gossips = Gossip.last(20)
-        @list_gossips.each do |gossip|
-            puts gossip.id
-            puts gossip.title
-            puts gossip.user.first_name
-        end
     end
 
     def show
@@ -27,11 +22,22 @@ class GossipsController < ApplicationController
     end
 
     def edit
+        @gossip = Gossip.find(params[:id])
     end
 
     def update
+        @gossip = Gossip.find(params[:id])
+        if @gossip.update(title: params[:title],content: params[:content])
+            redirect_to @gossip
+        else
+            render :edit
+        end
     end
 
     def destroy
+        @gossip = Gossip.find(params[:id])
+        if @gossip.delete
+            redirect_to root_path
+        end
     end
 end

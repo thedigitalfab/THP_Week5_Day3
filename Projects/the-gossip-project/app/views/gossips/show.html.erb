@@ -12,6 +12,8 @@
             <p><%= @gossip.content %></p>
             <p>Gossip writed by: <a href="/users/<%= @gossip.user.id %>/"><cite title="Source Title"><%= @gossip.user.first_name%> <%= @gossip.user.last_name%></cite></a></p>
             <footer class="blockquote-footer"> <%= @gossip.created_at %> </footer>
+            <a href="" class="edit_gossip_path(@gossip.id)">Edit</a>
+            <a href="" class="gossip_path" data-method="Delete">Delete</a>
         </div>
     </div>
 </div>

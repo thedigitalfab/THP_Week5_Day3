@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-    get '/', to: 'home#show'
-    
     # rails routes for gossips:
+    root 'home#show'
     resources :home
     resources :contact, only: [:index]
     resources :team, only: [:index]
