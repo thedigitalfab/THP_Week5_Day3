@@ -1,0 +1,33 @@
+<br/>
+<div class="container">
+    <div class="card-deck mb-1 text-center">
+        <div class="card mb-2 shadow-sm">
+            <div class="card-header">
+                <h1>City Profile:</h1>
+            </div>
+            <p>
+                Name: <%= @city.name %><br/>
+                Zip Code: <%= @city.zip_code %><br/>
+            </p>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1>All the Gossips from <%= @city.name %>!</h1>
+</div>
+
+<div class="container">
+    <% @list_gossips.each do |gossip|%>
+        <div class="card-deck mb-1 text-center">
+            <div class="card mb-2 shadow-sm">
+                <div class="card-header"></div>
+                <a href="/gossips/<%= gossip.id %>/">
+                    <h4 class="my-0 font-weight-normal"><%= gossip.title %></h4>
+                </a>
+                <footer class="blockquote-footer">Gossip writed by: <a href="/users/<%= gossip.user.id %>/"><cite title="Source Title"><%= gossip.user.first_name%> <%= gossip.user.last_name%></cite></a> -- <a href="/cities/<%= gossip.user.city.id %>/"><cite title="Source Title"><%= gossip.user.city.name%></cite></a> </footer>
+            </div>
+        </div>
+    <% end %>
+</div>
+<br/>

@@ -8,10 +8,10 @@
         <div class="card-deck mb-1 text-center">
             <div class="card mb-2 shadow-sm">
                 <div class="card-header"></div>
-                <a href="/gossip/<%= gossip.id %>/">
+                <a href="/gossips/<%= gossip.id %>/">
                     <h4 class="my-0 font-weight-normal"><%= gossip.title %></h4>
                 </a>
-                <footer class="blockquote-footer">Gossip writed by: <a href="/user/<%= gossip.user.id %>/"><cite title="Source Title"><%= gossip.user.first_name%> <%= gossip.user.last_name%></cite></a> </footer>
+                <footer class="blockquote-footer">Gossip writed by: <a href="/users/<%= gossip.user.id %>/"><cite title="Source Title"><%= gossip.user.first_name%> <%= gossip.user.last_name%></cite></a> </footer>
             </div>
         </div>
     <% end %>

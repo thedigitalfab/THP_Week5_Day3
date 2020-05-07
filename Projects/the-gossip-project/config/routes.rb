@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :team, only: [:index]
     resources :gossips
     resources :users
+    resources :cities
 end

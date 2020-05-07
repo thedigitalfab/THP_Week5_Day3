@@ -1,4 +1,4 @@
-# THP_Week5_Day2
+# THP_Week5_Day3
 1. Git clone
 2. Go to folder: the-gossip-project
 2. createdb the_gossip_project_development

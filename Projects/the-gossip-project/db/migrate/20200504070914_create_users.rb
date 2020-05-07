@@ -4,8 +4,9 @@ class CreateUsers < ActiveRecord::Migration[6.0]
             # Define User's field:
             t.string :first_name
             t.string :last_name
-            t.integer :age
+            t.text :description
             t.string :email
+            t.integer :age
             # Define User's relations:
             t.belongs_to :city, index:true
             

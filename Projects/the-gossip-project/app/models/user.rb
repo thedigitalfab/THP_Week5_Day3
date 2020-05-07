@@ -10,6 +10,7 @@ class User < ApplicationRecord
     # Model's Validations:
     validates :first_name, presence: true
     validates :last_name, presence: true
+    # validates :description
     # validates :age
     # validates :email
 end

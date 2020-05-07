@@ -10,7 +10,7 @@
                 <h2><%= @gossip.title %></h2>
             </div>
             <p><%= @gossip.content %></p>
-            <p>Gossip writed by: <a href="/user/<%= @gossip.user.id %>/"><cite title="Source Title"><%= @gossip.user.first_name%> <%= @gossip.user.last_name%></cite></a></p>
+            <p>Gossip writed by: <a href="/users/<%= @gossip.user.id %>/"><cite title="Source Title"><%= @gossip.user.first_name%> <%= @gossip.user.last_name%></cite></a></p>
             <footer class="blockquote-footer"> <%= @gossip.created_at %> </footer>
         </div>
     </div>
